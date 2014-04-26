@@ -1,5 +1,15 @@
 <!doctype>
 <style type="text/css">
+	body{
+		background-color: #000;
+	}
+	#container{
+		margin-top: 30px;
+		width: 800px;
+		height: 800px;
+		border: 1px solid #333;
+		position: relative;
+	}
 	.dot{
 		position: absolute;
 		width: 30px;
@@ -13,9 +23,9 @@
 	}
 </style>
 <button id="start">Start</button>
-<div id="bg">
+<body id="bg">
 	<div id="container"></div>
-</div>
+</body>
 <script src="./client-ui.js"></script>
 <script>
 	var counter = 0;
