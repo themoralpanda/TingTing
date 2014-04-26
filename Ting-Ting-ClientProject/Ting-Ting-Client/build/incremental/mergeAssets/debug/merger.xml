@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger>
+
+    <dataSet config="main" >
+        <source path="C:\Users\Pathi\Documents\GitHub\TingTing\Ting-Ting-ClientProject\Ting-Ting-Client\src\main\assets" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="C:\Users\Pathi\Documents\GitHub\TingTing\Ting-Ting-ClientProject\Ting-Ting-Client\src\debug\assets" />
+    </dataSet>
+
+</merger>
