@@ -1,8 +1,8 @@
 var ws;
-var start = function start(){
+var start = function start(callback){
   if ("WebSocket" in window)
   {
-    ws = new WebSocket("wss://192.168.115.142:42737");
+    ws = new WebSocket("ws://192.168.114.163:42737");
     ws.onopen = function() {
       ws.send("Wazzzzzzzzzzzzup!");
       console.log("Socket opened");
@@ -10,6 +10,7 @@ var start = function start(){
     ws.onmessage = function (evt) { 
       var data = evt.data;
       console.log("sound @", data);
+      callback && callback(data);
     };
     ws.onerror = function() {
       console.log('ada poda...');

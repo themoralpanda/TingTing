@@ -1,0 +1,36 @@
+<!doctype>
+<style type="text/css">
+	.dot{
+		position: absolute;
+		width: 30px;
+		height: 30px;
+		background: red;
+		border-radius: 50%;
+		transition-duration: 0.5s;
+		filter: blur(10px);
+		-webkit-filter: blur(5px);
+		-moz-filter: blur(5px);
+	}
+</style>
+<button id="start">Start</button>
+<div id="bg">
+	<div id="container"></div>
+</div>
+<script src="./client-ui.js"></script>
+<script>
+	var counter = 0;
+	document.getElementById('start').onclick = function(event) {
+		stop();
+		start(function(data){
+			var temp = counter + 1;
+			counter++;
+			document.getElementById('container').innerHTML += '<div class="dot" style="top: '+data.x+'px; left: '+data.y+'px" id="dot-'+temp+'"></div>';
+				var el = document.getElementById('dot-'+temp);
+				el.style.opacity = 0;
+				el.style.color = 'blue';
+				setTimeout(function(){
+					el.remove();
+				}, 500);
+		});
+	}
+</script> 
